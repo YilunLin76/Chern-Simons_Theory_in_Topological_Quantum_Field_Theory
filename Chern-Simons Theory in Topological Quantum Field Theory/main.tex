@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{physics}
+\usepackage{braket}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{sectsty}
+\usepackage{titling}
+\usepackage{tocloft}
+\usepackage{hyperref}
+\usepackage[numbers]{natbib}
+\geometry{a4paper,  margin=1in}
+\setstretch{1.5}
+\subsectionfont{\itshape}
+\numberwithin{equation}{section}
+
+% Title Infomation
+\title{Chern-Simons Theory in Topological Quantum Field Theory}
+\author{YILUN LIN}
+\date{June 2025}
+\renewcommand{\contentsname}{\centering\Large\bfseries Table of Contents}
+\begin{document}
+\doublespacing
+
+% Title Page
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}{\Huge\textbf{\thetitle}\par}
+    \vspace{2cm}{\Large\textbf{\theauthor\footnotemark[1]} \par}
+    \vspace{2cm}{\Large\textbf{ABSTRACT}\par}
+    \vspace{0.5cm}
+    \begin{spacing}{1.2}
+    \Large{This paper is devoted to ...}
+    \end{spacing}
+    \vspace{2cm}
+    \Large\textbf{June 2025}
+    \footnotetext[1]{\normalsize e-mail: andrewlam240819@gmail.com}
+    \thispagestyle{plain}
+\end{titlepage}
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{2}
+% Table of Contents
+\begin{center}
+\tableofcontents
+\end{center}
+\thispagestyle{plain}
+\clearpage
+\newpage
+
+% Main Body
+\include{section1}
+\newpage
+\include{section2}
+\newpage
+\include{section3}
+\newpage
+\include{section4}
+\newpage
+\include{section5}
+\newpage
+\include{discussion}
+\newpage
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{unsrtnat}
+\bibliography{references}
+
+\end{document}
