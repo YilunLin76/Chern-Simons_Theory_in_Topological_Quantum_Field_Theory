@@ -16,14 +16,33 @@ where $\left[\mathbf{x}/\mathbf{y}\right]$ denotes the determinant of the matrix
 \begin{equation}\label{eq: R-torsion of representation}
     \begin{split}
         \log{\tau_M (X)}\,\equiv\,\log{\tau\left(C\left(M,X\right)\right)}\,=\,
-        \log{\left[\prod_{j=1}^{n+1}\,\sqrt{\det(-\mathbf\Delta_{j-1})}^{(-1)^j\cdot(j-1)}\right]},
+        \log{\left[\prod_{j=1}^{n+1}\,\sqrt{\det(\mathbf\Delta_{j-1})}^{(-1)^j\cdot(j-1)}\right]},
     \end{split}
 \end{equation}
 given $M$ is a finite-cell complex whose cellular chain complex is $C$ while $X$ is an orthogonal representation of the fundamental group of $M$. In \eqref{eq: R-torsion of representation}, $\mathbf{\Delta}_j$ denotes the coordinate representation of the combinatorial Laplacian $\mathbf{\Delta}$ with respect to a given basis on $C_j$, which can be defined in terms of the boundary operator $\mathcal{B}$ on $C$ as
 \begin{equation}
     \begin{split}
-        \mathbf{\Delta}\,&\equiv\,-\,\mathcal{B}\,\mathcal{B}^T\,-\,\mathcal{B}^T\,\mathcal{B}, \\
+        \mathbf{\Delta}\,&\equiv\,\,\mathcal{B}\,\mathcal{B}^T\,+\,\mathcal{B}^T\,\mathcal{B}, \\
         \mathbf{\Delta}\,&\rightarrow\,\mathbf{\Delta}_j\,=\,\{\Delta_j^{\mu\nu}\}.
+    \end{split}
+\end{equation}
+The core idea of the above reformulation \eqref{eq: R-torsion of representation} is replacing the algebraic dependence on the specific choice of bases with the combinatorial Laplacian, whose spectrum encapsulates the same information in a coordinate-free manner. This remarkable observation then naturally paves the way for a generalization of the concept of analytic torsion $T$, with the application of the spectral zeta function $\zeta_k$ of the analytic Hodge Laplacian $\mathbf{\Delta}^{Hodge}$\,\cite{raySinger71rtorsion},\,\cite{raySinger1973Analytic}. In detail, the Hodge Laplacian (also known as the de Rham Laplacian) is a fundamental concept in Riemannian geometry, which is defined in terms of the exterior derivative $d:\,\Omega^j\left(N\right)\rightarrow\Omega^{j+1}\left(N\right)$ and its codifferential $\delta:\,\Omega^j\left(N\right)\rightarrow\Omega^{j-1}\left(N\right)$ on a Riemannian manifold $\left(N,g\right)$, in the form of 
+\begin{equation}
+    \begin{split}
+        \mathbf{\Delta}^{Hodge}&:\,\Omega^j\left(N\right)\rightarrow\,\Omega^j\left(N\right),\\
+        \mathbf{\Delta}^{Hodge}\,&\equiv\,d\circ\delta\,+\delta\circ d.
+    \end{split}
+\end{equation}
+And the spectral zeta function $\zeta_k\left(r\right)$ of $\mathbf{\Delta}^{Hodge}$ is defined as the sum of the negative-$r$ powers of the nonzero eigenvalues of $\mathbf{\Delta}_k^{Hodge}$, which is the matrix representation of $\mathbf{\Delta}^{Hodge}$ with respect to a given basis for each space $\Omega^k\left(N\right)$ of smooth differential $k$-forms on the Riemannian manifold $\left(N,g\right)$. The derivative of this spectral zeta function at $r=0$ is used to construct the $\zeta$-regularized determinant of the Hodge Laplacian, as follows:
+\begin{equation}\label{eq: regularized determinant of the Hodge Laplacian}
+    \begin{split}
+        \mathrm{det}^{(reg)}\left(\mathbf{\Delta}_k^{Hodge}\right)\,\equiv\,\exp\left[\left.\frac{\mathrm{d}}{\mathrm{d}r}\zeta_k\left(r\right)\right|_{r=0}\right].
+    \end{split}
+\end{equation}
+This mathematical construction in \eqref{eq: regularized determinant of the Hodge Laplacian} implies that, in analogy with definition \eqref{eq: R-torsion of representation}, the logarithm of the determinant of Hodge Laplacian in the expression of the logarithm of the torsion can be replaced with the value of the derivative of the spectral zeta function at $r=0$, leading to the definition of analytic torsion:
+\begin{equation}
+    \begin{split}
+        \log{T}\,=\,\sum_{k=1}^{n+1}\,\frac{\left(k-1\right)\cdot\left(-1\right)^{k+1}}{2}\cdot\left.\frac{\mathrm{d}}{\mathrm{d}r}\zeta_k\left(r\right)\right|_{r=0}.
     \end{split}
 \end{equation}
 
