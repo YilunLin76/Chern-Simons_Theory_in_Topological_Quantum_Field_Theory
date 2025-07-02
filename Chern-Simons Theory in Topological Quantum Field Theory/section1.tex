@@ -47,7 +47,7 @@ This mathematical construction in \eqref{eq: regularized determinant of the Hodg
 \end{equation}
 The equivalence between the analytic torsion and the Reidemeister torsion was rigorously proved by Cheeger and M{\"u}ller and is encapsulated in the Cheeger-M{\"u}ller theorem\,\cite{cheeger1979AnalyticTorsion},\,\cite{muller1978AnalyticRTorsion}. 
 \par The definition \eqref{eq: spectral definition of analytic torsion} of analytic torsion through the spectral zeta function played an important role in constructing the first example of a topological quantum field theory, also known as the Schwarz-type TQFT. At the core of the construction lies the insight that analytic torsion can be formulated as the partition function (a functional integral) associated with a degenerate quadratic functional (the action). A detailed mathematical exposition is required to elucidate the rationale underlying this core idea. Firstly, we know that the Hodge Laplacian defined on the space of smooth $q$-forms of a compact Riemannian manifold is a positive-definite and self-adjoint operator acting on an infinite-dimensional Hilbert space. While it is well known that, in linear algebra, the Gaussian integral associated with such a positive-definite and self-adjoint operator in a finite-dimensional space has the form of
-\begin{equation}
+\begin{equation}\label{eq: Gaussian integral in finite-dimensional case}
     \begin{split}
         \int_{\mathbb{R}^n}e^{-\frac{1}{2}x^{T}Ax}\,\mathrm{d}x\,=\,\sqrt{\frac{\left(2\pi\right)^n}{\det A}}\,\propto\,\left(\det A\right)^{-\frac{1}{2}}. 
     \end{split}
@@ -55,10 +55,51 @@ The equivalence between the analytic torsion and the Reidemeister torsion was ri
 By analogy with the finite-dimensional case, while the dimension of the space tends to infinity, it is expected that the Gaussian integral of a positive-definite and self-adjoint operator, as is the case for the Hodge Laplacian $\mathbf{\Delta}^{Hodge}$, takes the form:
 \begin{equation}\label{proportionality between Gaussian integral determinant^-1/2}
     \begin{split}
-        \int \mathcal{D}\phi\,e^{-\frac{1}{2}\langle\phi,\mathbf{\Delta}^{Hodge}\phi\rangle}\,\propto\,\left(\det\mathbf{\Delta}^{Hodge}\right)^{-\frac{1}{2}}.
+        \int_{\mathscr{H}} \mathcal{D}\phi\,e^{-\frac{1}{2}\langle\phi,\mathbf{\Delta}^{Hodge}\phi\rangle}\,\propto\,\left(\det\mathbf{\Delta}^{Hodge}\right)^{-\frac{1}{2}},
     \end{split}
 \end{equation}
-This conclusion \eqref{proportionality between Gaussian integral determinant^-1/2} already implies that the analytic torsion, to some extent, exhibits a robust interior correlation with the Gaussian integral. That is because according to \eqref{eq: spectral definition of analytic torsion} and the relationship in \eqref{eq: regularized determinant of the Hodge Laplacian}, the logarithm of the analytic torsion is expressed as a superposition of logarithms of $\left(\det\mathbf{\Delta}^{Hodge}\right)^{-\frac{1}{2}}$ which is directly proportional to the Gaussian integral. However, when the Laplacian $\mathbf{\Delta}^{Hodge}$ has a nontrivial kernel, that is, if it possesses eigenvalues which are zero, then its determinant vanishes, causing the corresponding Gaussian integral to diverge. In this case, 
-
+where $\mathscr{H}$ denotes the infinite-dimensional Hilbert space. This conclusion \eqref{proportionality between Gaussian integral determinant^-1/2} already implies that the analytic torsion, to some extent, exhibits a robust interior correlation with the Gaussian integral. That is because according to \eqref{eq: spectral definition of analytic torsion} and the relationship in \eqref{eq: regularized determinant of the Hodge Laplacian}, the logarithm of the analytic torsion is expressed as a superposition of logarithms of $\left(\det\mathbf{\Delta}^{Hodge}\right)^{-\frac{1}{2}}$ which is directly proportional to the Gaussian integral. However, when the Laplacian $\mathbf{\Delta}^{Hodge}$ has a nontrivial kernel, that is, if it possesses eigenvalues which are zero, then its determinant vanishes, causing the corresponding Gaussian integral to diverge. This indicates that the determinant in its conventional form
+\begin{equation}
+    \begin{split}
+        \det\mathbf{\Delta}^{Hodge}\,=\,\prod\lambda_i
+    \end{split}
+\end{equation}
+cannot be straightforwardly employed to express the Gaussian integral. Furthermore, the same methodology pioneered by Ray and Singer can be applied here to address the issue of divergences. In the following, a more detailed explanation of why this method of regularization is effective for the Hodge Laplacian defined on an infinite-dimensional Hilbert space is provided. Consider the case of a finite-dimensional space, where we could also define the spectral zeta function for a positive-definite and self-adjoint operator $A$ as
+\begin{equation}\label{eq: definition of zeta function}
+    \begin{split}
+        \zeta_{A}\left(r\right)\,\equiv\,\sum\lambda_{i}^{-r}.
+    \end{split}
+\end{equation}
+Thus
+\begin{equation}
+    \begin{split}
+        \zeta_{A}'\left(r\right)\,\equiv\,\frac{\mathrm{d}}{\mathrm{d}r}\zeta_{A}\left(r\right)\,=\,-\sum\lambda_{i}^{-r}\cdot \ln\left(\lambda_{i}\right),
+    \end{split}
+\end{equation}
+and
+\begin{equation}
+    \begin{split}
+        \zeta_{A}'\left(0\right)\,=\,-\sum\ln\left(\lambda_{i}\right)\,=\,-\ln\prod\lambda_{i}\,=\,-\ln\left(\det A\right).
+    \end{split}
+\end{equation}
+That means, by saying
+\begin{equation}\label{traditional interpretation of Gaussian integral}
+    \begin{split}
+        \int_{\mathbb{R}^n}e^{-\frac{1}{2}x^{T}Ax}\mathrm{d}x\,\propto\,\left(\prod\lambda_{i}\right)^{-\frac{1}{2}}
+    \end{split}
+\end{equation}
+about the Gaussian integral associated with the operator $A$, we are actually also implying
+\begin{equation}\label{essence of Gaussian integral in finite-dimensional case}
+    \begin{split}
+        \int_{\mathbb{R}^{n}}e^{-\frac{1}{2}x^{T}Ax}\mathrm{d}x\,\propto\,\left(e^{-\zeta_{A}'\left(0\right)}\right)^{-\frac{1}{2}}.
+    \end{split}
+\end{equation}
+And this \eqref{essence of Gaussian integral in finite-dimensional case} is precisely the mathematical essence of the statement \eqref{eq: Gaussian integral in finite-dimensional case}. In the case of a finite-dimensional operator, statements \eqref{traditional interpretation of Gaussian integral} and \eqref{essence of Gaussian integral in finite-dimensional case} are mathematically equivalent. However, in the case for an positive-definite operator on the infinite-dimensional Hilbert space, where zero modes could lead to the determinant vanishing, this mathematical essence \eqref{essence of Gaussian integral in finite-dimensional case} plays a vital role in regularizing the determinant and deriving the correct integral. To this end, we just need to simply exclude the contribution of the zero modes from the expression on the right-hand side of \eqref{essence of Gaussian integral in finite-dimensional case}. That is, for an infinite-dimensional operator, such as $\mathbf{\Delta}^{Hodge}$, replace the definition \eqref{eq: definition of zeta function} with $\zeta_{\mathbf{\Delta}^{Hodge}}\left(r\right)\,\equiv\,\sum_{nonzero}\lambda_{i}^{-r}$ which does not include any of the operator's zero eigenvalues $\lambda_{i}\,=\,0$. After refining this definition, the above essence \eqref{essence of Gaussian integral in finite-dimensional case} would still naturally remain valid, following the same procedure of derivation as in the finite-dimensional case. Actually, this invariance of the expression \eqref{essence of Gaussian integral in finite-dimensional case} is the reason why  we consider it to be the essence underlying the relationship \eqref{traditional interpretation of Gaussian integral}. Therefore, now we have 
+\begin{equation}\label{proportionality of infinite-dimensional Gaussian integral}
+    \begin{split}
+        \int_{\mathscr{H}}\mathcal{D}\phi\,e^{-\frac{1}{2}\langle\phi,\mathbf{\Delta}^{Hodge}\phi\rangle}\,\propto\,\left(e^{-\zeta_{\mathbf{\Delta}^{Hodge}}'\left(0\right)}\right)^{-\frac{1}{2}}
+    \end{split}
+\end{equation}
+for the Hodge Laplacian acting on infinite-dimensional Hilbert space. Incidentally, the proportionality constant associated with \eqref{proportionality of infinite-dimensional Gaussian integral} depends heavily on the spatial measure $\mathcal{D}\phi$ corresponding to the functional integral, although evidently, $\mathcal{D}\phi$ is only a formal integration measure in physics whose normalization could not be rigorously determined in mathematics, just as in many well known constructions in fundamental quantum field theory. The above derivation from \eqref{eq: definition of zeta function} to \eqref{proportionality of infinite-dimensional Gaussian integral} is how the methodology of zeta function pioneered by Ray and Singer is successfully applied to address the divergent integral. We now return to \eqref{proportionality between Gaussian integral determinant^-1/2} with the regularized determinant of Hodge Laplacian as shown above.
 
 \subsection{Historical Background of Chern-Simons Theory} % 2~3 pages
