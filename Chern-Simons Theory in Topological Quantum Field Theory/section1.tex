@@ -134,7 +134,21 @@ for the Hodge Laplacian acting on infinite-dimensional Hilbert space. Incidental
 \setstretch{1.2}
 \par Chern-Simons theory has had a profound impact on theoretical physics. However, it was originally developed independently within the realm of pure mathematics.
 \par To appreciate the historical foundations and conceptual precursors of Chern-Simons theory, one must trace back to the formulation of Chern-Weil theory in the 1940s. From 1944 on, S. S. Chern embarked on a systematic exploration of the formulation of characteristic classes through the use of connections and curvature forms. Through the collaboration with A. Weil, Chern further developed a rigorous framework for constructing characteristic classes of principal bundles by expressing them as de Rham cohomology classes derived from invariant polynomials in curvature forms. In a more precise manner, the Chern-Weil theorem clearly indicates that invariant polynomials applied to curvature forms yield differential forms that represent topological invariants of smooth principal bundles\,\cite{chern1946characteristic}. This central idea serves as the cornerstone that shapes the development of the Chern-Weil theory, which establishes an insightful and elegant connection between differential geometry and topological invariants. Chern-Weil theory significantly contributes to the later emergence of Chern-Simons theory.
-\par Building upon a profound understanding of geometric objects such as connections, curvature, and characteristic classes, Chern continued carefully studying the conceptual structures and gradually developed Chern-Simons theory as a natural extension of Chern-Weil theory in the 1970s. In Chern-Weil theory, the differential form representatives of characteristic classes depend on the particular choice of connection, although they represent the same cohomology class in the de Rham cohomology. 
+\par Building upon a profound understanding of geometric objects such as connections, curvature, and characteristic classes, Chern continued carefully studying the conceptual structures and gradually developed Chern-Simons theory as a natural extension of Chern-Weil theory in the 1970s. In Chern-Weil theory, the differential form representatives of characteristic classes depend on the particular choice of connection, although they represent the same cohomology class in the de Rham cohomology. Chern and Simons attempted to attain a deeper understanding of the geometric structure underlying the differences among representatives of characteristic classes arising from distinct connections. This line of inquiry laid the groundwork for the development of secondary characteristic classes. 
+\par We now provide a somewhat rigorous mathematical description to the main idea of Chern-Simons theory which is briefly stated in the previous paragraph. Suppose we are given two different connections $A_{0}$ and $A_{1}$ on the same principal bundle, $f$ is an invariant polynomial acting on the curvature space of connections. Applying $f$ on the curvature $F$ gives a closed differential form $f\left(F\right)$, whose de Rham conjugacy class represents a topological invariant. Let $F_{0}$ and $F_{1}$ denote the curvatures of connections $A_{0}$ and $A_{1}$ respectively, that is,
+\begin{equation}
+    \begin{split}
+        F_{0}\,&=\,\mathrm{d}A_{0}\,+\,A_{0}\wedge A_{0} \\
+        F_{1}\,&=\,\mathrm{d}A_{1}\,+\,A_{1}\wedge A_{1}.
+    \end{split}
+\end{equation}
+Although $f\left(F_{0}\right)$ and $f\left(F_{1}\right)$ represent the same characteristic class, they differ in form. Furthermore, the difference of them is an exact form, which means
+\begin{equation}\label{eq: difference of invariant polynomials}
+    \begin{split}
+        f\left(F_{1}\right)-f\left(F_{0}\right)\,=\,\mathrm{d}\mathbf{Q}_{2n-1}\left(A_{0},A_{1}\right).
+    \end{split}
+\end{equation}
+When Chern and Simons studied this differences of characteristic class in 1974, they systematically constructed the differential form $\mathbf{Q}_{2n-1}\left(A\right)$. This differential form was later designated as the Chern-Simons form $\mathbf{CS}_{2n-1}\left(A\right)$. It is worth noting that the primitive of this difference in \eqref{eq: difference of invariant polynomials} provides the local expression of secondary characteristic class\,\cite{chern1974characteristic}. 
 \par Physical motivation, Deser-Jackiw-Templeton introduced Chern-Simons term as mass term to gauge field theory.
 \par Edward Witten 1989,
 \par philosophical insight
