@@ -156,7 +156,7 @@ When Chern and Simons studied this differences of characteristic class in 1974, 
         \mathcal{L}\,=\,-\frac{1}{4}\mathbf{F}_{\mu\nu}\mathbf{F}^{\mu\nu},
     \end{split}
 \end{equation}
-with a gauge invariance under local $U\left(1\right)$ transformation $A_{\rho}\rightarrow A_{\rho}+\partial_{\rho}\alpha\left(\Vec{x}\right)$. If we impose a Proca mass term to this Lagrangean by hand, then we have
+with a gauge invariance under local $U\left(1\right)$ transformation $A_{\rho}\rightarrow A_{\rho}+\partial_{\rho}\Lambda\left(\Vec{x}\right)$. If we impose a Proca mass term to this Lagrangean by hand, then we have
 \begin{equation}
     \begin{split}
         \mathcal{L}_{Proca}\,=\,-\frac{1}{4}\mathbf{F}_{\mu\nu}\mathbf{F}^{\mu\nu}+\frac{1}{2}m^{2}A_{\rho}A^{\rho}.
@@ -174,7 +174,15 @@ which means the $U\left(1\right)$ local gauge symmetry of the previous Lagrangea
         \mathcal{L}_{CS}\,=\,\frac{m}{2}\epsilon^{\mu\nu\rho}A_{\mu}\partial_{\nu}A_{\rho}.
     \end{split}
 \end{equation}
-Originally, the 3-dimensional gauge field with $U\left(1\right)$ symmetry has no dynamics of its own. With adding this term \eqref{Chern-Simons mass term} to the previous Lagrangean $\mathcal{L}_{U\left(1\right)}$, it acquires a propagating degree of freedom. 
+When applying a $U\left(1\right)$ gauge transformation on it, we have
+\begin{equation}\label{Prove gauge invariance of Chern-Simons term}
+    \begin{split}
+        \mathcal{L}_{CS}'\,&=\,\frac{m}{2}\epsilon^{\mu\nu\rho}A_{\mu}'\partial_{\nu}A_{\rho}' \\
+        &=\,\frac{m}{2}\epsilon^{\mu\nu\rho}\left(A_{\mu}+\partial_{\mu}\Lambda\right)\partial_{\nu}\left(A_{\rho}+\partial_{\rho}\Lambda\right) \\
+        &=\,\mathcal{L}_{CS}+\frac{m}{2}\epsilon^{\mu\nu\rho}\left[A_{\mu}\left(\partial_{\nu}\partial_{\rho}\Lambda\right)\,+\,\left(\partial_{\mu}\Lambda\right)\left(\partial_{\nu}A_{\rho}\right)\,+\,\left(\partial_{\mu}\Lambda\right)\left(\partial_{\nu}\partial_{\rho}\Lambda\right)\right].
+    \end{split}
+\end{equation}
+Thus, this mass term \eqref{Chern-Simons mass term} can preserve the local gauge symmetry. Originally, the 3-dimensional gauge field with $U\left(1\right)$ symmetry has no dynamics of its own. With adding this term \eqref{Chern-Simons mass term} to the previous Lagrangean $\mathcal{L}_{U\left(1\right)}$, it acquires a propagating degree of freedom corresponding to a massive mode with a single polarization whose direction of rotation is determined by the sign of mass. 
 \par Physical motivation, Deser-Jackiw-Templeton introduced Chern-Simons term as mass term to gauge field theory.
 \par Edward Witten 1989,
 \par philosophical insight
