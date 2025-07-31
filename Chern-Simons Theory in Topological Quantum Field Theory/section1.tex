@@ -182,7 +182,13 @@ When applying a $U\left(1\right)$ gauge transformation on it, we have
         &=\,\mathcal{L}_{CS}+\frac{m}{2}\epsilon^{\mu\nu\rho}\left[A_{\mu}\left(\partial_{\nu}\partial_{\rho}\Lambda\right)\,+\,\left(\partial_{\mu}\Lambda\right)\left(\partial_{\nu}A_{\rho}\right)\,+\,\left(\partial_{\mu}\Lambda\right)\left(\partial_{\nu}\partial_{\rho}\Lambda\right)\right].
     \end{split}
 \end{equation}
-Thus, this mass term \eqref{Chern-Simons mass term} can preserve the local gauge symmetry. Originally, the 3-dimensional gauge field with $U\left(1\right)$ symmetry has no dynamics of its own. With adding this term \eqref{Chern-Simons mass term} to the previous Lagrangean $\mathcal{L}_{U\left(1\right)}$, it acquires a propagating degree of freedom corresponding to a massive mode with a single polarization whose direction of rotation is determined by the sign of mass. 
+Observe the last line of \eqref{Prove gauge invariance of Chern-Simons term}. Since partial derivatives commute, $\comm{\partial_{\nu}}{\partial_{\rho}}\,=\,0$, the combination of symmetry and antisymmetry causes the terms $\epsilon^{\mu\nu\rho}A_{\mu}\partial_{\nu}\partial_{\rho}\Lambda$ and $\epsilon^{\mu\nu\rho}\left(\partial_{\mu}\Lambda\right)\left(\partial_{\nu}\partial_{\rho}\Lambda\right)$ to vanish. The term $\epsilon^{\mu\nu\rho}\partial_{\mu}\Lambda\partial_{\nu}A_{\rho}$ is a total divergence, which can be written as 
+\begin{equation}
+    \begin{split}
+        \epsilon^{\mu\nu\rho}\partial_{\mu}\Lambda\partial_{\nu}A_{\rho}\,=\,\partial_{\mu}\left(\epsilon^{\mu\nu\rho}\Lambda\partial_{\nu}A_{\rho}\right)-\Lambda\epsilon^{\mu\nu\rho}\partial_{\mu}\partial_{\nu}A_{\rho},
+    \end{split}
+\end{equation}
+where the second term vanishes and the first term is a total derivative Thus, this mass term \eqref{Chern-Simons mass term} can preserve the local gauge symmetry. Originally, the 3-dimensional gauge field with $U\left(1\right)$ symmetry has no dynamics of its own. With adding this term \eqref{Chern-Simons mass term} to the previous Lagrangean $\mathcal{L}_{U\left(1\right)}$, it acquires a propagating degree of freedom corresponding to a massive mode with a single polarization whose direction of rotation is determined by the sign of mass. 
 \par Physical motivation, Deser-Jackiw-Templeton introduced Chern-Simons term as mass term to gauge field theory.
 \par Edward Witten 1989,
 \par philosophical insight
