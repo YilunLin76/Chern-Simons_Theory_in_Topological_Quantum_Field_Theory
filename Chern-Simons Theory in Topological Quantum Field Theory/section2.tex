@@ -18,11 +18,35 @@ Topological manifold is a fundamental notion in differential geometry. It has br
 \par There are several crucial types of maps between differentiable manifolds that we have to clarify before introducing the notion of fiber bundle. For a differentiable manifold, we customarily term the local coordinate functions $\phi_{\alpha}\left(\mathbf{x}\right)$ $\left(\forall\,\mathbf{x}\in U_{\alpha}\subset M\right)$ provided by charts in the differentiable structure a local coordinate system. A smooth map between two differentiable manifolds $\left(M,\mathfrak{F}_{M}\right)$ and $\left(N,\mathfrak{F}_{N}\right)$ is a function $f:M\rightarrow N$ whose expressions in local coordinate system are smooth. This type of maps is very important since the fiber bundle projection that will soon be discussed is exactly a smooth map. Building on this, a map is called a diffeomorphism if it is a bijective function, and both itself and its inverse satisfy the above definition of smooth maps. It should be noted that a diffeomorphism is an isomorphism in the category of smooth manifolds. 
 \par In order to discuss the notions of tangent space and tangent bundle, we now introduce the definition of tangent vectors at a point on the differentiable manifold first. For a differentiable manifold $\left(M,\mathfrak{F}_{M}\right)$ and a point $p$ on $M$, consider all smooth curves $\gamma: \left(-\epsilon,\epsilon\right)\rightarrow M$ such that $\gamma\left(0\right)=p$. Two such smooth curves $\gamma_{i}$ and $\gamma_{j}$ are viewed as equivalent if and only if there exists a local chart $\left(U_{\alpha},\phi_{\alpha}\right)$ such that the values of derivatives of functions $\phi_{\alpha}\circ\gamma_{i}$ and $\phi_{\alpha}\circ\gamma_{j}$ are equal at $0$. Each class of such equivalent curves is termed a tangent vector at point $p$. 
 \par Each point $p$ on a differentiable manifold is associated with a tangent space $T_{p}M$. This tangent space is just a linear space composed of all distinct tangent vectors of the manifold $\left(M,\mathfrak{F}_{M}\right)$ at point $p$. While the tangent space is defined at each single point of the manifold, the notion of tangent bundle is formulated based on the entire differentiable manifold, which means there exists a unique tangent bundle for each given manifold $\left(M,\mathfrak{F}_{M}\right)$. The tangent bundle of a manifold can be simply defined as:
-\begin{equation}
+\begin{equation}\label{definition of a tangent bundle}
     \begin{split}
         TM\,:=\,\bigsqcup_{p\in M} T_{p}M.
     \end{split}
 \end{equation}
-The symbol $\bigsqcup$ is used here to refer to a disjoint union of tangent spaces at all points on $M$, in order to suggest that tangent vectors from different tangent spaces (i.e. tangent spaces of different points) are always regarded as distinct mathematical objects in the entire tangent bundle. 
+The symbol $\bigsqcup$ is used here to refer to a disjoint union of tangent spaces at all points on $M$, in order to suggest that tangent vectors from different tangent spaces (i.e. tangent spaces of different points) are always regarded as distinct mathematical objects in the entire tangent bundle. The tangent bundle itself is a new differentiable manifold different from the original differentiable manifold $M$. Since the base manifold $M$ has a dimension of $n$ and each tangent space $T_{p}M$ also has a dimension of $n$, the tangent bundle defined as \eqref{definition of a tangent bundle} is a differentiable manifold with dimension $2n$.
+\par Suppose $f:M\rightarrow N$ is a smooth map between two differentiable manifolds $M$ and $N$, $p$ is a point on $M$ and $f\left(p\right)=q$. The differential of map $f$ at point $p$ is a linear map which assigns a unique tangent vector in $T_{q}N$ to each tangent vector in $T_{p}M$:
+\begin{equation}
+    \begin{split}
+        \mathrm{d}f_{p}:T_{p}M\rightarrow T_{q}N.
+    \end{split}
+\end{equation}
+\par Customarily, there are several equivalent ways to formulate the definition of this differential $\mathrm{d}f_{p}$. We only expound the most common one here, which is from the perspective of classes of equivalent curves we just mentioned. Since each tangent vector is a class of equivalent curves, for each tangent vector, select one arbitrary curve from that corresponding class. Obviously, $f\circ\gamma$ is a feasible curve at point $q\in N$ (i.e. $f\circ\gamma:\,\left(-\epsilon,\epsilon\right)\rightarrow N$, $[f\circ\gamma]\left(0\right)=q$). The differential $\mathrm{d}f_{p}$ is defined to assign the tangent vector associated with the class of curves equivalent with $f\circ\gamma$ to the tangent vector associated with the class of curves equivalent with $\gamma$. 
+\par It can be proved that this definition is self-consistent. This is because, once two curves $\gamma_{i}$ and $\gamma_{j}$ on manifold $M$ are equivalent, we have
+\begin{equation}
+    \begin{split}
+        \left.\frac{\mathrm{d}}{\mathrm{d}\mu}\left(\phi_{\alpha}\circ\gamma_{i}\right)\right|_{\mu=0}\,=\,\left.\frac{\mathrm{d}}{\mathrm{d}\mu}\left(\phi_{\alpha}\circ\gamma_{j}\right)\right|_{\mu=0},
+    \end{split}
+\end{equation}
+where $\phi_{\alpha}$ is the local coordinate function in chart $\left(U_{\alpha},\phi_{\alpha}\right)$ associated with the open set $U_{\alpha}$ containing point $p$, and $\mu\in\left(-\epsilon,\epsilon\right)$. According to the chain rule and the differentiability of coordinate functions, it follows directly that
+\begin{equation}
+    \begin{split}
+        \left.\frac{\mathrm{d}}{\mathrm{d}\mu}\left(\psi_{\beta}\circ f\circ\gamma_{i}\right)\right|_{\mu=0}\,=\,\left.\frac{\mathrm{d}}{\mathrm{d}\mu}\left(\psi_{\beta}\circ f\circ\gamma_{j}\right)\right|_{\mu=0},
+    \end{split}
+\end{equation}
+in which $\psi_{\beta}$ is the local coordinate function in chart $\left(V_{\beta},\psi_{\beta}\right)$ on manifold $N$ associated with the open set $V_{\beta}$ containing point $q$. Thus, curves $f\circ\gamma_{i}$ and $f\circ\gamma_{j}$ are also equivalent on manifold $N$. This property ensures the well-definedness of this version of definition. 
+\par 
+% Differential of a map between manifolds
+% Classification of immersion, submersion, and embedding
+% Discussion of fiber bundles
 \subsection{Characteristic Classes and Chern-Weil Theory}\label{subsec: Characteristic Classes and Chern-Weil Theory} % 6 pages
 \subsection{The Chern-Simons Form}\label{subsec: Chern-Simons Form} % 6 pages
