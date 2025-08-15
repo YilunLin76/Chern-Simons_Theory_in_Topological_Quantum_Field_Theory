@@ -2,6 +2,7 @@
 \section{Mathematical Foundations}\label{sec: Mathematical Foundations}
 \par This section aims to provide readers with an introduction to the fundamental mathematics which is necessary for understanding the Chern-Simons theory we will discuss in section \ref{sec: Chern-Simons Theory}. The introduction in this section will cover topics ranging from basic concepts in differential geometry to the key mathematical structures in the background of Chern-Simons theory, including the characteristic classes and Chern-Simons form. 
 \par We hope this mathematical background would be beneficial to readers, especially to those who are in the physics community and do not have sufficient knowledge of differential geometry. For readers already familiar with basic notions of differential geometry, it might be appropriate to skip some parts of this section and proceed directly to the discussion on characteristic classes and Chern-Weil theory. 
+\par It should be noted that in order to understand the material developed in section \ref{sec: Mathematical Foundations}, section \ref{sec: Chern-Simons Theory} and section \ref{sec: C-S Theory in TQFT}, readers are assumed to be familiar with basic knowledge of Lie groups and Lie algebras, including but not limited to the Cartan classification of simple Lie algebras over $\mathbb{C}$ and the adjoint representation for Lie groups. We will not specifically review the theory of Lie groups and Lie algebras in this paper because they play a rudimentary and ubiquitous role in quantum field theory and most physicists are already familiar with them. However, for readers do not have knowledge of group theory, we recommend them to prepare fundamental knowledge with these standard texts \cite{Hall2015},\,\cite{Knapp2002},\,\cite{FultonHarris1991},\,\cite{Humphreys1972} prior to reading the rest of this paper.  
 \subsection{Differential Geometry and Fiber Bundles}\label{subsec: Differential Geometry and Fiber Bundles} % 6 pages
 \subsubsection{Foundations of Differential Geometry}
 \par It is well known that a topology $\mathrm{T}$ on a nonempty set $X$ is a collection of subsets of that set $X$, such that: (i) both the empty set $\emptyset$ and $X$ itself are elements in $\mathrm{T}$; (ii) for any two subsets of $X$ which are elements in $\mathrm{T}$, their intersection is also an element of $\mathrm{T}$; (iii) the union of any collection of sets from $\mathrm{T}$ is also an element of $\mathrm{T}$. A topological space is defined to be a nonempty set with such a given topology $\mathrm{T}$ on it. Based on this simple definition, the so-called open sets in a topological space are just the sets in $\mathrm{T}$, and the closed sets are just those which are not in $\mathrm{T}$. 
@@ -58,7 +59,7 @@ in which $\psi_{\beta}$ is the local coordinate function in chart $\left(V_{\bet
     \end{split}
 \end{equation}
 \par Obviously, the fiber $F_{p}$ at each point $p\in M$ is endowed with a subtopology inherited from $E$ since $F_{p}$ is an inverse image of the smooth surjective map $\pi$ at $p$. Moreover, both $E$ and $M$ are differentiable manifolds and there exists a local trivialization $\varphi_{\alpha}$ (for which the point $p$ is contained in the open set $W_{\alpha}$ associated with $\varphi_{\alpha}$) which is a smooth homeomorphism (i.e. a diffeomorphism) such that $\varphi_{\alpha}\left(F_{p}\right)\,=\,\{p\}\times V$. Note that $\{p\}\times V$ is an embedded manifold of $W_{\alpha}\times V$. This indicates that $F_{p}$ is an embedded submanifold of $W_{\alpha}\times V$, which is diffeomorphic with the inverse image $\pi^{-1}\left(W_{\alpha}\right)$ that is again an embedded submanifold of $E$. Therefore, $F_{p}$ is an embedded submanifold of the total space $E$. The key point that guarantees the above process is the property of diffeomorphism of the local trivialization that always preserve the differentiable structures of manifolds.
-\par For an arbitrary point $p\in M$, the fiber at that point $F_{p}$ must be diffeomorphic with the typical fiber $V$ of the fiber bundle. This is a direct consequence of the local triviality of a fiber bundle. Significantly, the dimension of a fiber at each point is equal to the dimension of total space minus the dimension of base space. This is because the local trivialization $\varphi_{\alpha}$ is a diffeomorphism and
+\par We now provide a brief analysis about the dimension of the fiber at each point of the base space. Note that the local trivialization $\varphi_{\alpha}$ is a diffeomorphism and
 \begin{equation}
     \begin{split}
         \varphi_{\alpha}[\pi^{-1}\left(W_{\alpha}\right)]=W_{\alpha}\times V,
@@ -71,13 +72,15 @@ thus
     \end{split}
 \end{equation}
 Since $F_{p}$ is diffeomorphic with $V$ and $p\in W_{\alpha}$, we have
-\begin{equation}
+\begin{equation}\label{dimension of fiber at each point}
     \begin{split}
         \dim{F_{p}}\,&=\,\dim{V}  \\
         &=\,\dim{\pi^{-1}\left(W_{\alpha}\right)}\,-\,\dim{W_{\alpha}}  \\
         &=\,\dim{E}\,-\,\dim{M}.
     \end{split}
 \end{equation}
-\par 
+This derivation \eqref{dimension of fiber at each point} indicates that the dimension of a fiber at each point is equal to the dimension of total space minus the dimension of base space. This is a significant result that should be kept in mind during the following exploration of Chern-Simons theory.
+\par For an arbitrary point $p\in M$, the fiber at that point $F_{p}$ must be diffeomorphic with the typical fiber $V$ of the fiber bundle. This is a direct consequence of the local triviality of a fiber bundle. However, in general, fiber bundles need not to be globally trivial, which means, a fiber bundle generally does not possess a natural global identification among its each-point fibers. The specific type of fiber bundles which do possess such a natural global identification are termed (globally) trivial bundles. Suppose $\left(E,\pi,M,V\right)$ is an arbitrary fiber bundle. 
+\subsubsection{Principal Bundle And Associated Bundle}
 \subsection{Characteristic Classes and Chern-Weil Theory}\label{subsec: Characteristic Classes and Chern-Weil Theory} % 6 pages
 \subsection{The Chern-Simons Form}\label{subsec: Chern-Simons Form} % 6 pages
